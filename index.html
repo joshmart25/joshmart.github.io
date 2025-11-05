@@ -6,19 +6,47 @@
     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 <!-- <link rel="stylesheet" href="style.css" /> -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @font-face {
+        font-family: 'Open Sans';
+        src: url('localfonts/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
+        font-weight: 300 700;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'Open Sans';
+        src: url('localfonts/OpenSans-Italic-VariableFont_wdth,wght.ttf') format('truetype');
+        font-weight: 300 700;
+        font-style: italic;
+      }
+
+      @font-face {
+        font-family: 'Momo Signature';
+        src: url('localfonts/MomoSignature-Regular.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @layer utilities {
+        .font-momo {
+          font-family: 'Momo Signature', cursive;
+        }
+        .font-opensans {
+          font-family: 'Open Sans', sans-serif;
+        }
+      }
+    </style>
   </head>
 
-  <body class="bg-pink-100/80 gray-800 p-4 font-sans">
+  <body class="bg-pink-100/80 gray-800 p-4 font-opensans">
     <!-- All content goes here edit 11/5/2025  -->
     <div id="all-contents" class="max-w-4xl mx-auto">
       <nav class="bg-rose-900 p-4 rounded-lg mb-4 shadow-md">
   <div class="flex justify-between items-center">
-    <h1 class="text-white text-2xl font-bold">Josh's Amazing Site</h1>
+    <h1 class="text-white text-2xl font-bold font-momo">Josh's Amazing Site</h1>
     <ul class="flex space-x-4">
       <li>
         <a href="index.html" class="text-white w-full rounded-lg border hover:text-green-400 px-3 py-2 rounded">Home</a>
